@@ -4,7 +4,7 @@ import face_recognition
 import os
 from datetime import datetime
 
-path = 'absensi'
+path = 'absensi'  #folder for face image
 images = []
 classNames = []
 myList = os.listdir(path)
@@ -25,7 +25,7 @@ def findEncodings(images):
     return encodeList
 
 def faceList(name):
-    with open('data.csv', 'r+') as f:
+    with open('data.csv', 'r+') as f:  #file csv untuk menyimpan data di excel
         myDataList = f.readlines()
         nameList = []
         for line in myDataList:
